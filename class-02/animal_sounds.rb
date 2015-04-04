@@ -6,4 +6,9 @@ puts "What sound does #{name} make?"
 	sound = gets.chomp.downcase.strip
 	puts "You entered #{sound}."
 
-puts "A #{name} goes #{sound}, #{sound}, #{sound}."
+puts "How many times does the #{name} go #{sound}?"
+	number = gets.chomp.to_i
+
+numbered_sounds = sound * number
+
+puts "A #{name} goes #{numbered_sounds}."
