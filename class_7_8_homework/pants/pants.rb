@@ -19,7 +19,7 @@ parsed = zippopotam_response.parsed_response
 @long = parsed["places"][0]["longitude"]
 @lat = parsed["places"][0]["latitude"]
 
-url = "https://api.forecast.io/forecast/52b257299ff66e4d1e170ef6f9b3df67/34.1005,-118.3254"
+url = "https://api.forecast.io/forecast/52b257299ff66e4d1e170ef6f9b3df67/#{@lat},#{@long}"
 forecast_response = HTTParty.get(url)
 parsed = forecast_response.parsed_response
 
