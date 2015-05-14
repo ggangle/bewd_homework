@@ -1,0 +1,25 @@
+<h1>Fill out the form below to add a new dog.</h1>
+
+<%= form_for @new_dog do |d| %>
+
+	Name
+	<%= d.text_field :name %><br>
+
+	Breed
+	<%= d.text_field :breed %><br>
+
+	Color
+	<%= d.text_field :color %><br>
+
+	Size
+	<%= d.text_field :size %><br>
+
+	Age
+	<%= d.text_field :age %><br>
+
+	Photo URL
+	<%= d.text_field :url %><br>
+
+	<%= d.submit "Add Dog" %>
+
+<% end %>

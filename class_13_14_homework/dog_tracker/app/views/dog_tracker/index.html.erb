@@ -1,0 +1,13 @@
+<h1>Pasadena Humane Society Index</h1>
+
+<p>
+	<a href="/dogs/new">Add a new dog</a>
+</p>
+
+<ol>
+	<% @dogs.each do |d| %>
+		<li>
+			<a href="/dogs/<%= d.id %>"><%= d.name %></a>
+		</li>
+	<% end %>
+</ol>
