@@ -1,0 +1,27 @@
+<h1> Fill out the form below to add a new car to the index.</h1>
+
+<a href="/cars">return home</a><br><br>
+
+<%= form_for @new_car do |c| %>
+
+	Make
+	<%= c.text_field :make %><br>
+
+	Model
+	<%= c.text_field :model %><br>
+
+	Year
+	<%= c.text_field :year %><br>
+
+	Color
+	<%= c.text_field :color %><br>
+
+	Nickname
+	<%= c.text_field :nickname %><br>
+
+	URL
+	<%= c.text_field :url %><br>
+
+	<%= c.submit "Add Car" %>
+
+<% end %>

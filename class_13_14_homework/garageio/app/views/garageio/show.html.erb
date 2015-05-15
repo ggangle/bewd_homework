@@ -1,0 +1,15 @@
+<h1>All of Garageio's cars</h1>
+
+<a href="/cars">return home</a><br><br>
+
+	<% @cars.each do |c| %>
+		<h2><%= c.nickname %></h2>
+		<p><img src="<%= c.url %>" width="300"></p>
+		<p>
+			Make: <%= c.make %><br>
+			Model: <%= c.model %><br>
+			Color: <%= c.color %><br>
+			Year: <%= c.year %>
+		</p>
+
+	<% end %>
