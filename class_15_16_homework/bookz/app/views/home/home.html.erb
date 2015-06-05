@@ -1,0 +1,22 @@
+<h1>Bookz</h1>
+
+<h2>Authors</h2>
+	<a href="authors/new">Add a new author</a>
+
+	<% @authors.each do |a| %>
+	<ul>
+		<li><a href="authors/<%= a.id %>"><%= a.name %></a></li>
+	</ul>
+	<% end %>
+
+
+<h2>Books</h2>
+	<a href="books/new">Add a new book</a>
+
+	<% @books.each do |b| %>
+	<ul>
+		<li><%= b.title %> | Author: <%= b.author.name %></li>
+	</ul>
+
+	<% end %>
+

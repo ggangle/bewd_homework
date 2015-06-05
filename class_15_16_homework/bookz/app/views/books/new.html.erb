@@ -1,0 +1,19 @@
+<h1>Add New Book</h1>
+
+<%= form_for @book do |b| %>
+
+	<%= b.label :title %>
+	<%= b.text_field :title %>
+	<br>
+	<%= b.label :genre %>
+	<%= b.text_field :genre %>
+	<br>
+	<%= b.label :year_published %>
+	<%= b.text_field :year_published %>
+	<br>
+	<%= b.label :author_id %>
+	<%= b.collection_select :author_id, Author.all, :id, :name, prompt: "Select an author" %>
+	<br>
+	<%= b.submit "Create" %>
+
+<% end %>
